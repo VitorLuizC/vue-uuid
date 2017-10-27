@@ -1,0 +1,7 @@
+# Node.js dependencies
+node_modules/
+
+# Lock files
+# Because libs don't need it
+package-lock.json
+yarn.lock
