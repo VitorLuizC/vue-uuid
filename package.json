@@ -1,9 +1,8 @@
 {
   "name": "vue-uuid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add UUID to Vue instance.",
-  "main": "dist/index.common.js",
-  "module": "index.js",
+  "main": "dist/vue-uuid.common.js",
   "scripts": {
     "test": "standard",
     "build": "bili ./index.js -o dist --format cjs --format umd --compress umd",
