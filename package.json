@@ -1,6 +1,6 @@
 {
   "name": "vue-uuid",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Add UUID to Vue instance.",
   "main": "dist/vue-uuid.common.js",
   "scripts": {
@@ -31,6 +31,8 @@
     "uuid": "^3.1.0"
   },
   "standard": {
-    "ignore": ["dist/**"]
+    "ignore": [
+      "dist/**"
+    ]
   }
 }
