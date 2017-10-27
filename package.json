@@ -7,7 +7,7 @@
   "scripts": {
     "test": "standard",
     "build": "bili ./index.js -o dist --format cjs --format umd --compress umd",
-    "prepare": "npm run build"
+    "prepare": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
