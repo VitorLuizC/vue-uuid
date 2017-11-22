@@ -2,7 +2,7 @@
 
 Add UUID to Vue instance.
 
-## Installation
+## Install
 
 Installation is very easy, you just need to install using NPM or Yarn.
 
@@ -24,7 +24,7 @@ Vue.use(UUID)
 After installation `$uuid` is available on instance, so you can use inside
 components **template** and script, like the example below.
 
-```vue
+```html
 <template>
   <div class="uuid-panel">
     <h3 class="uuid">{{ uuid }}</h3>
