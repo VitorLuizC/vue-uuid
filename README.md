@@ -44,14 +44,24 @@ components **template** and script, like the example below.
       class="button"
       @click="uuid = $uuid.v4()"
     >Generate V4</button>
+    <button
+      class="button"
+      @click="uuid = $uuid.v5()"
+    >Generate V5</button>
   </div>
 </template>
 
 <script>
+  import { uuid } from 'vue-uuid' // uuid object is also exported to things
+                                  // outside Vue instance.
+
   export default {
     data () {
       return {
-        uuid: this.$uuid() // is equals to this.$uuid.v4()
+        uuid: uuid.v1(),
+        v1: this.$uuid.v1(),
+        v4: this.$uuid.v4(),
+        v5: this.$uuid.v5()
       }
     }
   }
