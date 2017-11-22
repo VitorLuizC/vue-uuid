@@ -2,6 +2,14 @@
 
 Add UUID to Vue instance.
 
+| [![JavaScript Style Guide][2]][3] | [![Build Status][0]][1] |
+|---|---|
+
+[0]: https://travis-ci.org/VitorLuizC/vue-uuid.svg?branch=master
+[1]: https://travis-ci.org/VitorLuizC/vue-uuid
+[2]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[3]: https://standardjs.com
+
 ## Install
 
 Installation is very easy, you just need to install using NPM or Yarn.
