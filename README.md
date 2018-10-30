@@ -2,8 +2,7 @@
 
 Add UUID to Vue instance.
 
-| [![JavaScript Style Guide][2]][3] | [![Build Status][0]][1] |
-|---|---|
+[![JavaScript Style Guide][2]][3] [![Build Status][0]][1]
 
 [0]: https://travis-ci.org/VitorLuizC/vue-uuid.svg?branch=master
 [1]: https://travis-ci.org/VitorLuizC/vue-uuid
@@ -32,7 +31,7 @@ Vue.use(UUID)
 After installation `$uuid` is available on instance, so you can use inside
 components **template** and script, like the example below.
 
-```html
+```vue
 <template>
   <div class="uuid-panel">
     <h3 class="uuid">{{ uuid }}</h3>
