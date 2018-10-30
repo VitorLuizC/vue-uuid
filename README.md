@@ -2,12 +2,7 @@
 
 Add UUID to Vue instance.
 
-[![JavaScript Style Guide][2]][3] [![Build Status][0]][1]
-
-[0]: https://travis-ci.org/VitorLuizC/vue-uuid.svg?branch=master
-[1]: https://travis-ci.org/VitorLuizC/vue-uuid
-[2]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
-[3]: https://standardjs.com
+[![Build Status](https://travis-ci.org/VitorLuizC/vue-uuid.svg?branch=master)](https://travis-ci.org/VitorLuizC/vue-uuid)
 
 ## Install
 
@@ -20,10 +15,10 @@ npm i vue-uuid
 Vue's `use` method will do the trick adding to Vue.
 
 ```js
-import Vue from 'vue'
-import UUID from 'vue-uuid'
+import Vue from 'vue';
+import UUID from 'vue-uuid';
 
-Vue.use(UUID)
+Vue.use(UUID);
 ```
 
 ## Usage
@@ -51,8 +46,8 @@ components **template** and script, like the example below.
 </template>
 
 <script>
-  import { uuid } from 'vue-uuid' // uuid object is also exported to things
-                                  // outside Vue instance.
+  import { uuid } from 'vue-uuid'; // uuid object is also exported to things
+                                   // outside Vue instance.
 
   export default {
     data () {
@@ -61,8 +56,8 @@ components **template** and script, like the example below.
         v1: this.$uuid.v1(),
         v4: this.$uuid.v4(),
         v5: this.$uuid.v5()
-      }
+      };
     }
-  }
+  };
 </script>
 ```

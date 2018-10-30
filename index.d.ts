@@ -28,16 +28,16 @@ export const uuid: UUID;
  * Installs UUID on Vue instance. It creates a property on Vue instance to
  * expose an object with uuid's v1, v4 and v5 functions.
  * @example ```js
- * import Vue from 'vue'
- * import VueUUID from 'vue-uuid'
+ * import Vue from 'vue';
+ * import VueUUID from 'vue-uuid';
  *
- * Vue.use(VueUUID)
+ * Vue.use(VueUUID);
  *
  * new Vue({
  *   mounted () {
- *     console.log(this.$uuid.v1())
+ *     console.log(this.$uuid.v1());
  *   }
- * })
+ * });
  * ```
  * @param Vue - Vue constructor.
  */
