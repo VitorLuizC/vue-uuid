@@ -2,11 +2,11 @@
   "name": "vue-uuid",
   "version": "1.0.0",
   "description": "Add UUID to Vue instance.",
-  "main": "dist/vue-uuid.common.js",
+  "main": "dist/vue-uuid.cjs.js",
   "module": "dist/vue-uuid.es.js",
   "scripts": {
     "test": "standard && ava",
-    "build": "bili ./index.js -o dist --format cjs --format es --format umd --compress umd",
+    "build": "bili index.js --format es,cjs,umd,umd-min",
     "prepare": "npm run test && npm run build"
   },
   "repository": {
@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/VitorLuizC/vue-uuid#README",
   "devDependencies": {
-    "ava": "^0.23.0",
-    "bili": "^0.18.2",
-    "standard": "^10.0.3"
+    "ava": "^0.25.0",
+    "bili": "^3.1.2",
+    "standard": "^12.0.1"
   },
   "dependencies": {
-    "uuid": "^3.1.0"
+    "uuid": "^3.3.2"
   },
   "standard": {
     "ignore": [
