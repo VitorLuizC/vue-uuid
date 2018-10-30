@@ -1,3 +1,8 @@
+/*!
+ * vue-uuid v1.0.0
+ * (c) 2017-present Vitor Luiz Cavalcanti
+ * Released under the MIT License.
+ */
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -13,10 +18,9 @@ var uuid = {
   v4: v4,
   v5: v5
 };
-
-var install = function install(Vue) {
+function install(Vue) {
   Vue.prototype.$uuid = uuid;
-};
+}
 
 exports.uuid = uuid;
 exports.default = install;

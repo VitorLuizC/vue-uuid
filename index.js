@@ -4,8 +4,6 @@ import v5 from 'uuid/v5'
 
 export const uuid = { v1, v4, v5 }
 
-const install = (Vue) => {
+export default function install (Vue) {
   Vue.prototype.$uuid = uuid
 }
-
-export default install

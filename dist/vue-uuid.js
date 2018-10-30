@@ -1,7 +1,12 @@
+/*!
+ * vue-uuid v1.0.0
+ * (c) 2017-present Vitor Luiz Cavalcanti
+ * Released under the MIT License.
+ */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.vueUuid = {})));
+	(factory((global.VueUUID = {})));
 }(this, (function (exports) { 'use strict';
 
 	function createCommonjsModule(fn, module) {
@@ -355,10 +360,9 @@
 	  v4: v4_1,
 	  v5: v5
 	};
-
-	var install = function install(Vue) {
+	function install(Vue) {
 	  Vue.prototype.$uuid = uuid;
-	};
+	}
 
 	exports.uuid = uuid;
 	exports.default = install;

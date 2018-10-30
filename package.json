@@ -2,11 +2,15 @@
   "name": "vue-uuid",
   "version": "1.0.0",
   "description": "Add UUID to Vue instance.",
+  "cdn": "dist/vue-uuid.min.js",
   "main": "dist/vue-uuid.cjs.js",
+  "unpkg": "dist/vue-uuid.min.js",
   "module": "dist/vue-uuid.es.js",
+  "jsdelivr": "dist/vue-uuid.min.js",
+  "umd:main": "dist/vue-uuid.js",
   "scripts": {
     "test": "standard && ava",
-    "build": "bili index.js --format es,cjs,umd,umd-min",
+    "build": "bili index.js --format es,cjs,umd,umd-min --banner --js buble --moduleName VueUUID",
     "prepare": "npm run test && npm run build"
   },
   "repository": {
