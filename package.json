@@ -5,6 +5,7 @@
   "cdn": "dist/vue-uuid.min.js",
   "main": "dist/vue-uuid.cjs.js",
   "unpkg": "dist/vue-uuid.min.js",
+  "types": "index.d.ts",
   "module": "dist/vue-uuid.es.js",
   "jsdelivr": "dist/vue-uuid.min.js",
   "umd:main": "dist/vue-uuid.js",
@@ -29,9 +30,11 @@
   },
   "homepage": "https://github.com/VitorLuizC/vue-uuid#README",
   "devDependencies": {
+    "@types/uuid": "^3.4.4",
     "ava": "^0.25.0",
     "bili": "^3.1.2",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "vue": "^2.5.17"
   },
   "dependencies": {
     "uuid": "^3.3.2"
