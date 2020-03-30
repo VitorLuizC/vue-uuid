@@ -40,7 +40,7 @@ components **template** and script, like the example below.
     >Generate V4</button>
     <button
       class="button"
-      @click="uuid = $uuid.v5()"
+      @click="uuid = $uuid.v5("Name 1", NAMESPACE)"
     >Generate V5</button>
   </div>
 </template>
@@ -49,13 +49,16 @@ components **template** and script, like the example below.
   import { uuid } from 'vue-uuid'; // uuid object is also exported to things
                                    // outside Vue instance.
 
+  const NAMESPACE = "65f9af5d-f23f-4065-ac85-da725569fdcd";
+
   export default {
     data () {
       return {
+        NAMESPACE,
         uuid: uuid.v1(),
         v1: this.$uuid.v1(),
         v4: this.$uuid.v4(),
-        v5: this.$uuid.v5()
+        v5: this.$uuid.v5("Name 2", NAMESPACE)
       };
     }
   };
