@@ -1,12 +1,15 @@
 import { v1, v4, v5 } from "uuid";
 
 /**
- * @typedef {{ v1: typeof v1, v4: typeof v4, v5: typeof v5 }} UUID
+ * @typedef {Object} UUID
+ * @property {typeof v1} v1
+ * @property {typeof v4} v4
+ * @property {typeof v5} v5
  */
 
 /**
  * An object with uuid's v1, v4 and v5 functions.
- * @type {UUI}
+ * @type {UUID}
  */
 export const uuid = { v1, v4, v5 };
 
