@@ -2,11 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var v1 = _interopDefault(require('uuid/v1'));
-var v4 = _interopDefault(require('uuid/v4'));
-var v5 = _interopDefault(require('uuid/v5'));
+var uuid$1 = require('uuid');
 
 /**
  * @typedef {{ v1: typeof v1, v4: typeof v4, v5: typeof v5 }} UUID
@@ -18,9 +14,9 @@ var v5 = _interopDefault(require('uuid/v5'));
  */
 
 var uuid = {
-  v1: v1,
-  v4: v4,
-  v5: v5
+  v1: uuid$1.v1,
+  v4: uuid$1.v4,
+  v5: uuid$1.v5
 };
 /**
  * Installs UUID on Vue instance. It creates a property on Vue instance to

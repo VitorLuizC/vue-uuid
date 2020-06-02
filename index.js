@@ -1,6 +1,4 @@
-import v1 from "uuid/v1";
-import v4 from "uuid/v4";
-import v5 from "uuid/v5";
+import { v1, v4, v5 } from "uuid";
 
 /**
  * @typedef {{ v1: typeof v1, v4: typeof v4, v5: typeof v5 }} UUID
