@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/VitorLuizC/vue-uuid#README",
   "devDependencies": {
-    "@types/uuid": "^3.4.4",
     "ava": "^0.25.0",
     "bili": "^3.1.2",
     "vue": "^2.5.17"
   },
   "dependencies": {
+    "@types/uuid": "^3.4.4",
     "uuid": "^3.3.2"
   }
 }
