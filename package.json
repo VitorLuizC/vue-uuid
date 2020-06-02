@@ -16,7 +16,7 @@
   "scripts": {
     "test": "ava",
     "build": "bili index.js --format es,cjs,umd,umd-min --minimal --moduleName VueUUID",
-    "prepare": "npm run test && npm run build"
+    "prepublishOnly": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
