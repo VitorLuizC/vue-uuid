@@ -10,9 +10,11 @@
   "jsdelivr": "dist/index.umd.min.js",
   "umd:main": "dist/index.umd.js",
   "files": [
-    "./dist/",
     "./index.d.ts"
   ],
+  "directories": {
+    "dist": "dist"
+  },
   "scripts": {
     "test": "ava",
     "build": "bili index.js --format es,cjs,umd,umd-min --minimal --moduleName VueUUID",
