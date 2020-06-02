@@ -33,9 +33,15 @@
     "url": "https://github.com/VitorLuizC/vue-uuid/issues"
   },
   "homepage": "https://github.com/VitorLuizC/vue-uuid#README",
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^3.8.2",
     "bili": "^4.10.1",
+    "esm": "^3.2.25",
     "vue": "^2.5.17"
   },
   "dependencies": {
