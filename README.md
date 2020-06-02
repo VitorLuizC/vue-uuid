@@ -36,6 +36,10 @@ components **template** and script, like the example below.
     >Generate V1</button>
     <button
       class="button"
+      @click="uuid = $uuid.v3()"
+    >Generate V3</button>
+    <button
+      class="button"
       @click="uuid = $uuid.v4()"
     >Generate V4</button>
     <button
@@ -57,6 +61,7 @@ components **template** and script, like the example below.
         NAMESPACE,
         uuid: uuid.v1(),
         v1: this.$uuid.v1(),
+        v3: this.$uuid.v3(),
         v4: this.$uuid.v4(),
         v5: this.$uuid.v5("Name 2", NAMESPACE)
       };
