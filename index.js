@@ -1,6 +1,6 @@
-import v1 from 'uuid/v1';
-import v4 from 'uuid/v4';
-import v5 from 'uuid/v5';
+import v1 from "uuid/v1";
+import v4 from "uuid/v4";
+import v5 from "uuid/v5";
 
 /**
  * @typedef {{ v1: typeof v1, v4: typeof v4, v5: typeof v5 }} UUID
@@ -29,6 +29,6 @@ export const uuid = { v1, v4, v5 };
  * ```
  * @param {import('vue').default} Vue Vue constructor.
  */
-export default function install (Vue) {
+export default function install(Vue) {
   Vue.prototype.$uuid = uuid;
 }
