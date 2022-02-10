@@ -41,5 +41,4 @@ function install(Vue) {
   Vue.prototype.$uuid = uuid;
 }
 
-export default install;
-export { uuid };
+export { install as default, uuid };

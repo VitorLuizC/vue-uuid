@@ -1,7 +1,7 @@
 import test from "ava";
 import { v1, v3, v4, v5 } from "uuid";
 
-import install from "./";
+import install from "./index.mjs";
 
 const generateVue = () => {
   class Vue {

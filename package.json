@@ -11,7 +11,7 @@
   "umd:main": "dist/index.umd.js",
   "scripts": {
     "test": "ava",
-    "build": "bili index.js --format es,cjs,umd,umd-min --minimal --moduleName VueUUID",
+    "build": "bili index.mjs --format esm,cjs,umd,umd-min --moduleName VueUUID",
     "prepublishOnly": "npm run build && npm run test"
   },
   "repository": {
@@ -34,14 +34,14 @@
       "esm"
     ]
   },
-  "devDependencies": {
-    "ava": "^3.8.2",
-    "bili": "^4.10.1",
-    "esm": "^3.2.25",
-    "vue": "^2.6.11"
-  },
   "dependencies": {
-    "@types/uuid": "^8.0.0",
-    "uuid": "^8.1.0"
+    "@types/uuid": "^8.3.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "ava": "^4.0.1",
+    "bili": "^5.0.5",
+    "esm": "^3.2.25",
+    "vue": "^2.6.14"
   }
 }
