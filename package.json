@@ -1,6 +1,6 @@
 {
   "name": "vue-uuid",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Add UUID to Vue instance.",
   "cdn": "dist/index.umd.min.js",
   "main": "dist/index.js",
