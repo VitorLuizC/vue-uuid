@@ -1,3 +1,5 @@
+// @ts-check
+
 import { v1, v3, v4, v5 } from "uuid";
 
 /**
@@ -15,22 +17,35 @@ import { v1, v3, v4, v5 } from "uuid";
 export const uuid = { v1, v3, v4, v5 };
 
 /**
- * Installs UUID on Vue instance. It creates a property on Vue instance to
- * expose an object with uuid's v1, v3, v4 and v5 functions.
- * @example ```js
+ * @typedef {import('vue').App<HostElement>} App
+ * @template HostElement
+ */
+
+/**
+ * Defines '$uuid' property globally, to be accessed in any component instance
+ * inside the application. The '$uuid' is an object with uuid's v1, v3, v4 and
+ * v5 functions.
+ *
+ * @example
  * import Vue from 'vue';
- * import VueUUID from 'vue-uuid';
+ * import withUUID from 'vue-uuid';
  *
- * Vue.use(VueUUID);
+ * const app = withUUID(
+ *   createApp({
+ *     // ...
+ *   }),
+ * );
  *
- * new Vue({
- *   mounted () {
- *     console.log(this.$uuid.v1());
+ * app.component('c-button', {
+ *   created() {
+ *     this.id = this.$uuid.v4();
  *   }
  * });
- * ```
- * @param {import('vue').default} Vue Vue constructor.
+ * @param {App<HostElement>} app
+ * @returns {App<HostElement>}
+ * @template HostElement
  */
-export default function install(Vue) {
-  Vue.prototype.$uuid = uuid;
+export default function withUUID(app) {
+  app.config.globalProperties["$uuid"] = uuid;
+  return app;
 }

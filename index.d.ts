@@ -1,5 +1,5 @@
-import Vue from "vue";
-import { v1, v3, v4, v5 } from "uuid";
+import type { App } from "vue";
+import type { v1, v3, v4, v5 } from "uuid";
 
 export interface UUID {
   v1: typeof v1;
@@ -8,8 +8,8 @@ export interface UUID {
   v5: typeof v5;
 }
 
-declare module "vue/types/vue" {
-  interface VueConstructor {
+declare module "@vue/runtime-core" {
+  export interface ComponentCustomProperties {
     /**
      * An object with uuid's v1, v3, v4 and v5 functions.
      */
@@ -23,20 +23,26 @@ declare module "vue/types/vue" {
 export const uuid: UUID;
 
 /**
- * Installs UUID on Vue instance. It creates a property on Vue instance to
- * expose an object with uuid's v1, v3, v4 and v5 functions.
- * @example ```js
+ * Defines '$uuid' property globally, to be accessed in any component instance
+ * inside the application. The '$uuid' is an object with uuid's v1, v3, v4 and
+ * v5 functions.
+ *
+ * @example
  * import Vue from 'vue';
- * import VueUUID from 'vue-uuid';
+ * import withUUID from 'vue-uuid';
  *
- * Vue.use(VueUUID);
+ * const app = withUUID(
+ *   createApp({
+ *     // ...
+ *   }),
+ * );
  *
- * new Vue({
- *   mounted () {
- *     console.log(this.$uuid.v1());
+ * app.component('c-button', {
+ *   created() {
+ *     this.id = this.$uuid.v4();
  *   }
  * });
- * ```
- * @param Vue - Vue constructor.
  */
-export default function install(Vue: Vue): void;
+export default function withUUID<HostElement = any>(
+  app: App<HostElement>
+): App<HostElement>;

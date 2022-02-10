@@ -15,10 +15,14 @@ npm i vue-uuid
 Vue's `use` method will do the trick adding to Vue.
 
 ```js
-import Vue from "vue";
-import UUID from "vue-uuid";
+import { createApp } from "vue";
+import withUUID from "vue-uuid";
 
-Vue.use(UUID);
+const app = withUUID(
+  createApp({
+    // ...
+  }),
+);
 ```
 
 ## Usage
